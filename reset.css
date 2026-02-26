@@ -47,6 +47,7 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
+  overflow-x: hidden;
 }
 
 /* Media elements */
@@ -153,5 +154,16 @@ textarea {
 .container {
   margin: auto;
   max-width: var(--container-max);
-  padding: 0 var(--space-2);
+  padding: 0 var(--space-4);
+}
+h1 {
+  font-size: var(--fs-h1);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+  font-weight: var(--fw-regular);
+}
+p {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-light);
 }

@@ -1,0 +1,80 @@
+:root {
+  /* Base unit = 8px */
+  --space-1: 0.5rem; /* 8px  */
+  --space-2: 1rem; /* 16px */
+  --space-3: 1.5rem; /* 24px */
+  --space-4: 2rem; /* 32px */
+  --space-5: 3rem; /* 48px */
+  --space-6: 4rem; /* 64px */
+  --space-7: 6rem; /* 96px */
+  --space-8: 8rem; /* 128px */
+
+  /* Base */
+  --fs-base: 1.125rem; /* 18px */
+
+  /* Headings */
+  --fs-h1: clamp(1rem, calc(3vw + 1rem), 4rem); /* 40px */
+  --fs-h2: 2rem; /* 32px */
+  --fs-h3: 1.25rem; /* 20px */
+
+  /* Small text */
+  --fs-sm: 0.875rem; /* 14px */
+
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  /* container */
+  --container-max: 69.375rem; /* 1110px */
+  --container-padding: 1rem; /* 16px */
+
+  /* Brand / Accent */
+  --color-accent-primary: hsl(136, 64%, 51%);
+  --color-accent-secondary: hsl(192, 69%, 51%);
+  --color-accent-gradient: linear-gradient(
+    to right,
+    var(--color-accent-primary),
+    var(--color-accent-secondary)
+  );
+  /* Text */
+  --color-text-primary: hsl(233, 26%, 24%);
+  --color-text-secondary: hsl(233, 8%, 62%);
+
+  /* Backgrounds */
+  --color-bg-page: hsl(0, 0%, 98%);
+  --color-bg-section: hsl(220, 16%, 96%);
+  --color-bg-surface: hsl(0, 100%, 100%);
+
+  /* hover effects */
+  --main-duration: 0.3s ease-in-out;
+}
+.hero {
+  background-color: var(--color-bg-page);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+  padding: var(--space-8) var(--space-4);
+}
+
+.hero-text p {
+  margin-bottom: var(--space-3);
+}
+.hero-image {
+  position: relative;
+}
+.hero-image img {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 150%;
+  max-width: 700px;
+}
+@media (max-width: 1000px) {
+  .hero-image img {
+    max-width: 500px;
+  }
+}
